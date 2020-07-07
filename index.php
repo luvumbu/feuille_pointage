@@ -41,6 +41,11 @@ td {
 	padding: 10px;
  
 }
+
+.fau{
+	font-size: 4em;
+	color:red;
+}
 </style>
 </body>
 </html>

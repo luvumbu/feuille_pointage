@@ -21,7 +21,7 @@ var section = new Vue({
     key_time_end:"",
     key_time_begin:"",    
     key_total_time:"",
-    
+    key_date:"",    
     info_time_rest:false,
     info_time_end:false,
     info_time_begin:false,
@@ -39,9 +39,7 @@ var section = new Vue({
         this.result=this.key_time_end-this.key_time_begin-this.key_time_rest;
         if(this.result<1){
           this.result=false;
-        }
- 
-      
+        }      
       }
   },
   time_end(event) {
@@ -67,9 +65,14 @@ time_begin(event) {
   if(this.result<1){
     this.result=false;
   }
+} ,
+time_date(event) {
+  this.key_date =event.target.value;
+  document.getElementById("time_date").className="";
 }
 
-}
+},
+ 
 })
 
 var footer = new Vue({
