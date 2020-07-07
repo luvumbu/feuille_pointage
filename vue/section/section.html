@@ -1,0 +1,97 @@
+<form :class="w50p">
+      <label for="partie1">Commencement Mission </label><i id="exclamation_begin" class="fas fa-exclamation-triangle"></i>
+      <select id="partie1" class="form-control" @change="time_begin($event)" class="form-control" v-model="key_time_begin">
+				<option selected>Choose...</option>
+				<option value="1">1h00</option>
+				<option value="2">2h00</option>
+				<option value="3">3h00</option>
+				<option value="4">4h00</option>
+				<option value="5">5h00</option>
+				<option value="6">6h00</option>
+				<option value="7">7h00</option>
+				<option value="8">8h00</option>
+				<option value="9">9h00</option>
+				<option value="10">10h00</option>
+				<option value="11">11h00</option>
+				<option value="12">12h00</option>
+				<option value="13">13h00</option>
+				<option value="14">14h00</option>
+				<option value="15">15h00</option>
+				<option value="16">16h00</option>
+				<option value="17">17h00</option>
+				<option value="18">18h00</option>
+				<option value="19">19h00</option>
+				<option value="20">20h00</option>
+				<option value="21">21h00</option>
+				<option value="22">22h00</option>
+				<option value="22">23h00</option>
+			</select>
+			
+			<label for="partie1">Fin de Mission </label><i id="exclamation_end" class="fas fa-exclamation-triangle"></i>	
+			<select id="partie2" class="form-control" @change="time_end($event)" class="form-control" v-model="key_time_end">
+				<option selected>Choose...</option>
+				<option value="1">1h00</option>
+				<option value="2">2h00</option>
+				<option value="3">3h00</option>
+				<option value="4">4h00</option>
+				<option value="5">5h00</option>
+				<option value="6">6h00</option>
+				<option value="7">7h00</option>
+				<option value="8">8h00</option>
+				<option value="9">9h00</option>
+				<option value="10">10h00</option>
+				<option value="11">11h00</option>
+				<option value="12">12h00</option>
+				<option value="13">13h00</option>
+				<option value="14">14h00</option>
+				<option value="15">15h00</option>
+				<option value="16">16h00</option>
+				<option value="17">17h00</option>
+				<option value="18">18h00</option>
+				<option value="19">19h00</option>
+				<option value="20">20h00</option>
+				<option value="21">21h00</option>
+				<option value="22">22h00</option>
+				<option value="22">23h00</option>
+			</select>			
+			<label for="partie1">Temps de répos durent la mission (Temps pour manger et pause) </label><i id="exclamation_rest" class="fas fa-exclamation-triangle"></i>
+      <select id="partie1" class="form-control" @change="time_rest($event)" class="form-control" v-model="key_time_rest">
+				<option selected>Choose</option>
+				<option value="0">0 pas de répos</option>
+				<option value="1">1h</option>
+				<option value="1.5">1h30</option>
+				<option value="2">2h00</option>
+			</select>
+</form>
+<div>
+{{key_total_time}}
+</div>
+
+
+
+ <table :class="w50p">
+	<tr>
+			<th>Commencement de la mission</th>
+			<th>Fin de la mission</th>
+			<th>Temps de repos</th>
+			<th>Total heure travaillé</th>
+	</tr>
+	<tr>
+		  <td>				
+				<h1 v-if="key_time_begin">{{key_time_begin}}H</h1>
+				<h1 v-else>😢</h1>
+			</td>
+		  <td>
+				<h1 v-if="key_time_end">{{key_time_end}}H</h1>
+				<h1 v-else>😢</h1>
+			</td>
+			<td>
+				<h1 v-if="info_time_rest">{{this.key_time_rest}}H</h1>
+				<h1 v-else>😢</h1>
+			</td>		
+			<td>
+				<h1 v-if="result">{{this.result}}H</h1>
+				<h1 v-else>😢</h1>
+			</td>			
+	</tr>
+</table> 

@@ -1,0 +1,53 @@
+body {
+	font-family: Roboto-Thin;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #1e3e79; 
+  border-radius: 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #1e3e79;  
+}
+/*
+  https://fontawesome.com/
+  font-family: "Roboto-Black";
+	font-family: "Roboto-BlackItalic";
+	font-family: "Roboto-BoldCondensed";
+	font-family: "Roboto-ThinItalic";
+	font-family: "Roboto-ThinItalic";
+	font-family: "Roboto-Thin";
+	font-family: "Roboto-Regular";
+	font-family: "Roboto-MediumItalic";
+	font-family: "Roboto-Medium";
+	font-family: "Roboto-LightItalic";
+	font-family: "Roboto-Light";
+	font-family: "Roboto-Italic";
+	font-family: "Roboto-CondensedItalic";
+	font-family: "Roboto-Condensed";
+	font-family: "Roboto-BoldItalic";
+	font-family: "Roboto-BoldCondensedItalic";
+	font-family: "Roboto-BoldCondensed";
+	font-family: "Roboto-Bold";
+	font-family: "Roboto-BlackItalic";
+	font-family: "Roboto-Black";
+	font-family: "BebasNeue-Regular"; 
+	font-family: "CaviarDreams";
+	font-family: "CaviarDreams_Italic"; 
+	font-family: "Comfortaa-Light"; 
+	font-family: "minimal";
+	font-family: "a_alloy_ink";
+	font-family: "Pokemon Hollow";
+*/	
