@@ -17,15 +17,19 @@ var section = new Vue({
   el: '#section',
   data: {
     w50p:"w50p",
-    key_time_rest:"",    
-    key_time_end:"",
-    key_time_begin:"",    
-    key_total_time:"",
-    key_date:"",    
+    key_time_rest:false,    
+    key_time_end:false,
+    key_time_begin:false,    
+    key_total_time:false,
+    key_date:false,  
+    key_intervention:false,
+    key_entreprise:false,  
     info_time_rest:false,
     info_time_end:false,
     info_time_begin:false,
-    result:""
+    result:false,
+    x:0,
+    y:0
   } , 
   methods: {
     time_rest(event) {
@@ -65,10 +69,30 @@ time_begin(event) {
   if(this.result<1){
     this.result=false;
   }
-} ,
-time_date(event) {
+} ,time_date(event) {
   this.key_date =event.target.value;
   document.getElementById("time_date").className="";
+}
+,intervention(event) {
+  this.key_intervention =event.target.value;
+  // document.getElementById("time_date").className="";
+  if(event.target.value!=""){
+    document.getElementById("intervention").className="";
+    this.key_intervention=event.target.value;
+  }else {
+    document.getElementById("intervention").className="fas fa-exclamation-triangle";
+  }  
+}
+
+,entreprise(event) {
+  this.key_entreprise =event.target.value;
+  // document.getElementById("time_date").className="";
+  if(event.target.value!=""){
+    document.getElementById("entreprise").className="";
+    this.key_entreprise=event.target.value;
+  }else {
+    document.getElementById("entreprise").className="fas fa-exclamation-triangle";
+  }  
 }
 
 },
@@ -81,4 +105,7 @@ var footer = new Vue({
     
   }
 })
+
+
+
  

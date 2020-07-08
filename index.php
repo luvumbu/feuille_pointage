@@ -6,10 +6,14 @@
 	<title>{{title}}</title>
 </head>
 <body>
-<?php 
-	include("app.php");
-	include("link.php");
-?>
+
+<div id="body">
+	<?php 
+		include("app.php");
+		include("link.php");
+		include("model/ip.php");
+	?>
+</div>
 <style>
 	.w50p{
 		width: 70%;
@@ -38,8 +42,7 @@ th,td {
 	border:1px solid rgba(0, 0, 0, 0.2);
 }
 td {
-	padding: 10px;
- 
+	padding: 10px; 
 }
 
 .fau{
@@ -47,5 +50,8 @@ td {
 	color:red;
 }
 </style>
+
+<div id="allselect"></div>
 </body>
 </html>
+
