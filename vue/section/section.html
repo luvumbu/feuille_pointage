@@ -1,6 +1,12 @@
 <div :class="w50p">
 <form>
   <div class="form-group">
+		<label for="">Nom :</label><i  id="alert_nom" class="fas fa-exclamation-triangle"></i>
+		<input type="text" class="form-control" id="" placeholder="Votre nom" style="padding: 25px;" @keyup="nom($event)">
+		<label for="">Prenom : </label><i  id="alert_prenom" class="fas fa-exclamation-triangle"></i>
+		<input type="text" class="form-control" id="prenom"  placeholder="Votre prenom" style="padding: 25px;" @keyup="prenom($event)">
+		
+		<br/>
 		<label>Date intervention</label>
 		<input type="date" style="padding: 10px;border:1px solid rgba(0,0,0,0.1)" @change="time_date($event)" ><i id="time_date" class="fas fa-exclamation-triangle"></i>
 		<br/>
@@ -11,7 +17,7 @@
   </div>
 </form>
 <form>
-      <label for="partie1">Commencement Mission </label><i id="exclamation_begin" class="fas fa-exclamation-triangle"></i>
+      <label for="partie1">Commencement mission </label><i id="exclamation_begin" class="fas fa-exclamation-triangle"></i>
       <select id="partie1" class="form-control" @change="time_begin($event)" class="form-control" v-model="key_time_begin">
 				<option selected>Choose...</option>
 				<option value="1">1h00</option>
@@ -102,7 +108,7 @@
 	</tr>
 </table>
 
-<button type="submit" class="btn btn-primary" style="margin-top:100px;margin-bottom:100px">Valider toutes les informations</button>
+<button id="submit_btn" type="submit" class="display_none" style="margin-top:100px;margin-bottom:100px">Valider toutes les informations</button>
 </div>
 
 

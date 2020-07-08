@@ -49,6 +49,13 @@ td {
 	font-size: 4em;
 	color:red;
 }
+
+.display_none{
+	display: none;
+}
+body{
+	padding-bottom: 400px;
+}
 </style>
 
 <div id="allselect"></div>
